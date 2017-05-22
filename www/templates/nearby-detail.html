@@ -1,0 +1,47 @@
+
+<ion-view view-title="{{detailData.name}}" hide-tabs="true">
+	<ion-nav-bar class=" bar-positive">
+		<ion-nav-back-button >
+			附近
+		</ion-nav-back-button>
+	</ion-nav-bar>
+
+	<ion-content >
+		<img ng-src="{{detailData.photo}}" style="width: 100%; height: 200px">
+
+		<ion-list >
+
+			<a class="item item-icon-left item-icon-right" href="" >
+				<h3>{{detailData.name}}</h3>
+				<p >
+					<span class="ion-ios-star"></span>
+					<span class="ion-ios-star"></span>
+					<span class="ion-ios-star"></span>
+					<span class="ion-ios-star"></span>
+					<span class="ion-ios-star-outline"></span>
+					<span>人均￥{{detailData.price}}</span>
+				</p>
+				<h4>月消费人次：{{detailData.sold}}</h4>
+			</a>
+			<a class="item item-icon-left item-icon-right" href="" >
+				<i class="icon ion-ios-location-outline"></i>
+				桥西区民族路华强广场(集圆大厦东临)
+				<i class="icon ion-ios-telephone-outline"></i>
+			</a>
+			<a class="item item-thumbnail-left" href="">
+				<img ng-src="{{detailData.photo}}">
+				<h2>烧烤+火锅</h2>
+				<p>门市价￥50</p>
+				<i class="icon ion-ios-arrow-right" style="float: right;"></i>
+			</a>
+			<a class="item item-icon-left item-icon-right" href="javascript:void(0)">
+				<i class="icon ion-ios-chatbubble-outline"></i>
+				大众点评网友评分
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+		</ion-list>
+
+	</ion-content>
+
+
+</ion-view>

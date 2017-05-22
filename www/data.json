@@ -1,0 +1,125 @@
+{
+    "sites": [
+        {   
+            "id":"0",
+            "photo":"img/a.png",
+            "name": "海悦天地",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"1"
+        },
+        {   
+            "id":"1",
+            "photo":"img/nearby/maidanglao.jpg",
+            "name": "麦当劳餐厅",
+            "sold": "322",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"1.2"
+        },
+        {   
+            "id":"2",
+            "photo":"img/nearby/xingbake.jpg",
+            "name": "星巴克咖啡",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"0.2"
+        },
+        {   
+            "id":"3",
+            "photo":"img/nearby/kendeji.jpg",
+            "name": "肯德基餐厅",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"3.2"
+        },
+         {   
+            "id":"4",
+            "photo":"img/a.png",
+            "name": "海悦天地",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"1"
+        },
+        {   
+            "id":"5",
+            "photo":"img/photo1.png",
+            "name": "麦当劳餐厅",
+            "sold": "322",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"1.2"
+        },
+        {   
+            "id":"6",
+            "photo":"img/photo2.png",
+            "name": "星巴克咖啡",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"0.2"
+        },
+        {   
+            "id":"7",
+            "photo":"img/photo3.png",
+            "name": "肯德基餐厅",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"3.2"
+        },
+         {   
+            "id":"8",
+            "photo":"img/a.png",
+            "name": "海悦天地",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"1"
+        },
+        {   
+            "id":"9",
+            "photo":"img/photo1.png",
+            "name": "麦当劳餐厅",
+            "sold": "322",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"1.2"
+        },
+        {   
+            "id":"10",
+            "photo":"img/photo2.png",
+            "name": "星巴克咖啡",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"0.2"
+        },
+        {   
+            "id":"11",
+            "photo":"img/photo3.png",
+            "name": "肯德基餐厅",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"3.2"
+        }
+       
+    ]
+}

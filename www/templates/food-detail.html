@@ -1,0 +1,94 @@
+<ion-view view-title="{{detailClass[0][0].title}}"  hide-tabs="true">
+	<ion-nav-bar class=" bar-positive">
+		<ion-nav-back-button >
+			返回
+		</ion-nav-back-button>
+	</ion-nav-bar>
+	
+	<ion-content scroll="false">
+		<div class="row">
+			<!-- 左侧导航 -->
+		    <div class="col col-25">
+		    	<ion-scroll scrollbar-y="false" style=" height: {{screenHeight}};" >
+		    	  
+			  		<div class="list" >
+						<!-- 添加锚点跳转 -->
+			  		    <a class="item " href="" ng-repeat="Class in detailClass" ng-click="gotoAnchor(Class[0].class)">
+			  		      <p>{{Class[0].class}}</p>
+			  		    </a>
+
+			  		</div>
+		    	</ion-scroll>
+		    </div>
+		    <!-- 右侧详情 -->
+		    <div class="col ">
+		    	<ion-scroll scrollbar-y="false" style=" height: {{screenHeight}};">
+		    	  	
+			  		<div class="list my-list" ng-repeat="Class in detailClass" id="anchor{{Class[0].class}}">
+			  			<div class="item item-divider">
+		  			         {{Class[0].class}}
+	  			        </div>
+			  		    <a class="item item-thumbnail-left" href="" ng-repeat="fooddetail in Class" style="padding-left76px;">
+				  		    <img ng-src="{{fooddetail.photo}}" style="max-width: 50px;max-height: 50px;">
+				  		    <h2>{{fooddetail.name}}</h2>
+				  		    <p>月售{{fooddetail.sold}}份</p>
+				  		    <p>￥{{fooddetail.price}}</p>
+				  		    <!-- <p>{{fooddetail.evaluate}}个评价</p> -->
+				  		    <div style="position: absolute;bottom:5px;right: 5px;">
+				  		    	<span ng-show="showbutton($index,$parent.$index)" >
+					  		    	<button class="button button-icon icon ion-ios-minus-outline positive" ng-click="reduce($index,$parent.$index)"></button>
+					  		    	<span style="line-height: 47px;color: #666;">{{fooddetail.num}}</span>
+				  		    	</span>
+				  		    	<button class="button button-icon icon ion-ios-plus positive" ng-click="add($index,$parent.$index)" ></button>
+				  		    </div>
+						
+			  		    </a>
+
+			  		</div>
+		    	</ion-scroll>
+		  </div>
+		</div>
+		
+	</ion-content>
+
+	<div  class="bar bar-subfooter carlist " ng-hide="showCar" >
+		<div class="bar bar-header bar-calm" >
+		    <h1 class="title">购物车</h1>
+		</div>
+
+		<ion-content>
+			<div class="list" > 
+				<a class="item" ng-repeat="x in CarItem">
+					<h2>
+						<span>
+							{{x.name}}
+						</span>
+						<span>￥{{x.price*x.num}}</span>	
+						<span style="float: right;height: 35px;position: absolute;top: 10px;right: 0px;">
+							<span ng-show="true" >
+								<button class="button button-icon icon ion-ios-minus-outline positive" ng-click="carReduce($index)"></button>
+								<span style="line-height: 35px;color: #666;">{{x.num}}</span>
+							</span>
+							<button class="button button-icon icon ion-ios-plus positive" ng-click="carAdd($index)" ></button>
+						</span>
+					</h2>
+				</a>
+			</div>
+		</ion-content>
+
+		<div class="bar bar-footer bar-calm">
+		    <div class="title">商品如需分开打包，请使用多人订餐</div>
+		</div>
+	</div>
+
+	<ion-footer-bar  align-title="left" class="bar-positive" style="padding: 0px;">
+
+		<button class="button button-icon icon ion-ios-cart-outline " ng-click="CartList()"></button>
+		<span class="badge badge-assertive" style="position: absolute;top: 0px;left: 35px;">{{count}}</span>
+		<span class="title" >{{total|currency:'￥'}}</span>
+		<div class="buttons my-button" ng-click="doSomething()">
+			<button class="button button-royal" style="height: 44px;width: 90px;border-radius: 0px;">结算</button>
+		</div>
+	</ion-footer-bar>
+
+</ion-view>

@@ -1,0 +1,23 @@
+
+<ion-tabs class="tabs-icon-top tabs-color-active tabs-positive" ng-class="{'tabs-item-hide': $root.hideTabs}">
+
+  <!-- Dashboard Tab   --> <!-- ui-serf='.home' === href="#/tab/home"-->
+  <ion-tab title="首页" icon-off="ion-ios-home-outline" icon-on=" ion-ios-home" ui-sref="tab.home" >
+    <ion-nav-view name="tab-home"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Chats Tab -->
+<ion-tab title="附近" icon-off="ion-ios-location-outline" icon-on="ion-ios-location" ui-sref="tab.nearby">
+    <ion-nav-view name="tab-nearby"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Account Tab -->
+  <ion-tab title="订单" icon-off=" ion-ios-cart-outline" icon-on="ion-ios-cart" ui-sref="tab.order">
+    <ion-nav-view name="tab-order"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="我的" icon-off="ion-ios-person-outline" icon-on="ion-ios-person" href="#/tab/mine">
+    <ion-nav-view name="tab-mine" ></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

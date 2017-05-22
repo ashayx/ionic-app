@@ -1,0 +1,190 @@
+<!-- 顶部条 -->
+<ion-header-bar  class="bar-positive bar-header">
+	
+	<div class="item-input-inset">
+		<label class="item-input-wrapper">
+			<i class="icon ion-ios-search placeholder-icon"></i>
+			<input type="search" placeholder="搜索">
+		</label>
+	</div>
+	<button class="button button-icon icon ion-qr-scanner" ></button>
+	<button class="button button-icon icon ion-ios-bell-outline" ></button>
+		
+</ion-header-bar>
+
+<!-- 内容 -->
+<ion-content>
+	<ionic-city-picker options='vm.CityPickData1' class="city"></ionic-city-picker>
+	
+	
+	<!-- 轮播图 -->
+	<ion-slide-box  does-continue="true" auto-play ="true" slide-interval ="2000">
+		<ion-slide>
+			<div class="box ">
+				<img src="img/banner1.jpg" alt="" style="width: 100%; ">
+			</div>
+		</ion-slide>
+		<ion-slide>
+			<div class="box ">
+				<img src="img/banner2.jpg" alt="" style="width: 100%;">
+			</div>
+		</ion-slide>
+		<ion-slide>
+			<div class="box ">
+				<img src="img/banner3.jpg" alt="" style="width: 100%;">
+			</div>
+		</ion-slide>
+		<ion-slide>
+			<div class="box">
+				<img src="img/banner4.jpg" alt="" style="width: 100%;">
+			</div>
+		</ion-slide>
+		<ion-slide on-slide-changed="slideHasChanged(index)">
+			<div class="box">
+				<img src="img/banner5.jpg" alt="" style="width: 100%;">
+			</div>
+		</ion-slide>
+	</ion-slide-box>
+	<!-- 滑动导航 -->
+	<ion-slide-box class="my-slide">
+		<ion-slide>
+			<div class="box padding">
+				<div class="row" >
+					<div class="col-20 " >
+						<a href="" class="slide-item1"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="#" class="slide-item2"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item3"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item4"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item5"></a>
+					</div>
+				</div>
+				<div class="row" >
+					<div class="col-20 " >
+						<a href="" class="slide-item6"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item7"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item8"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item9"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item10"></a>
+					</div>
+				</div>
+			</div>
+		</ion-slide>
+		<ion-slide>
+			<div class="box padding">
+				<div class="row" >
+					<div class="col-20 " >
+						<a href="" class="slide-item1"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item2"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item3"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item4"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item5"></a>
+					</div>
+				</div>
+				<div class="row" >
+					<div class="col-20 " >
+						<a href="" class="slide-item6"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item7"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item8"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item9"></a>
+					</div>
+					<div class="col-20 " >
+						<a href="" class="slide-item10"></a>
+					</div>
+				</div>
+			</div>
+		</ion-slide>
+
+	</ion-slide-box>
+	<!-- 图片导航 -->
+	<div class="photo-box">
+		<div class="row" style="height: 130px;">
+			<div class="col-40" >
+				<a href="#"><img src="img/photo1.png" style="height: 120px;"></a>
+			</div>
+			<div class="col-60" >
+				<div class="row" style="padding-top: 0px;padding-right:0px;height: 60px;">
+					<a href="#"><img src="img/photo2.png" style="height: 55px;"></a>
+				</div>
+
+				<div class="row" style="margin: 0px; padding-right: 0px;">
+					<div class="col-50" style="padding-right: 5px;">
+						<a href="#"><img src="img/photo3.png" style="height: 60px;"></a>
+					</div>
+					<div class="col-50" >
+						<a href="#"><img src="img/photo3.png" style="height: 60px;"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 商家列表 -->
+	<div >
+		<div class='padding'>
+			<span>商家分类<i class="ion-ios-arrow-down"></i></span>
+			<span style="float: right;">排序<i class="ion-ios-arrow-down"></i></span>
+		</div>
+		<div class="list ">
+			
+			<a class="item item-thumbnail-left " href=""  ng-repeat="food in foods" ui-sref="tab.food-detail({id:food.id})">
+				<img src={{food.photo}}>
+				<h2 class="">{{food.name}}</h2>
+				<p>
+					<span class="ion-ios-star"></span>
+					<span class="ion-ios-star"></span>
+					<span class="ion-ios-star"></span>
+					<span class="ion-ios-star"></span>
+					<span class="ion-ios-star-outline"></span>
+					<span>月售{{food.monthSold}}份</span>
+					<span style="float: right;">{{food.time}}分钟</span>
+				</p>
+				<p >
+					<span>起送￥{{food.price}}</span>|<span>配送￥{{food.extra}}</span>
+					<span style="float: right;">{{food.distance}}km</span>
+				</p>
+				<p >
+					<img src="img/red-new.png" alt="" style="height: auto;width: 7%;padding-top:2px;">
+					<span>新用户立减19元</span>
+				</p>
+				<p >
+					<i><img src="img/yellow-new.png" alt="" style="height: auto;width: 7%;"></i>
+					<span>满30减4元，满50减8元</span>
+				</p>
+			</a>	
+
+		</div>
+	</div>
+	
+	<!-- 上拉加载 -->
+	<ion-infinite-scroll immediate-check="false" on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
+
+</ion-content>

@@ -1,0 +1,63 @@
+<ion-header-bar  class="bar-positive ">
+	<button  class="button button-icon icon ion-ios-location-outline"></button>
+	<h1 class="title">附近</h1>
+	<button  class="button button-icon icon ion-ios-search"></button>
+</ion-header-bar>
+<div class="bar bar-subheader">
+	<div class="row"  style="border-bottom: 1px solid #f2f2f2">
+		<div class="col-33 " style="border-right: : 1px solid #f2f2f2">
+			<select>
+				<option>500m</option>
+				<option selected="">1000m</option>
+				<option>2000m</option>
+			</select>
+		</div>
+		<div class="col-33 " style="border-right: : 1px solid #f2f2f2">
+			<select>
+				<option>500m</option>
+				<option selected="">全部餐厅</option>
+				<option>2000m</option>
+			</select>
+		</div>
+		<div class="col-33 ">
+			<select>
+				<option>500m</option>
+				<option selected="">默认排序</option>
+				<option>2000m</option>
+			</select>
+		</div>
+	</div>
+
+</div>
+<ion-content class="has-subheader">
+	<div class=''>
+
+		<ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()" spinner=""></ion-refresher>
+
+		<div class="list " >
+
+			<a class="item item-thumbnail-left " href="" ng-repeat="nearby in loaddata" ui-sref="tab.nearby-detail({id:nearby.id})">
+				<img ng-src='{{nearby.photo}}'>
+				<h2>{{nearby.name}}</h2>
+				<p>
+					<span class="ion-ios-star"></span>
+					<span class="ion-ios-star"></span>
+					<span class="ion-ios-star"></span>
+					<span class="ion-ios-star"></span>
+					<span class="ion-ios-star-outline"></span>
+					<span>{{nearby.sold}}评价</span>
+					<span style="float: right;">人均￥{{nearby.time}}</span>
+				</p>
+				<p >
+					<span>起送￥{{nearby.price}}</span>|<span>配送￥{{nearby.extra}}</span>
+					<span style="float: right;">{{nearby.distance}}km</span>
+				</p>
+
+			</a>
+
+		</div>
+	</div>
+	<!-- 上拉加载 -->
+	<ion-infinite-scroll immediate-check="false" on-infinite="loadMore()" distance="1%" >
+	</ion-infinite-scroll>
+</ion-content>

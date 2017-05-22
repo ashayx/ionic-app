@@ -1,0 +1,109 @@
+/* Empty. Add your own CSS if you like */
+/* mine */
+.my-slide .slider-pager{
+	bottom: 5px;
+}
+.slider-pager .slider-pager-page{
+	color: #B0E0E6;
+	opacity:0.3;
+}
+img{
+	width: 100%;
+}
+.photo-box{
+	background-color: #e5e5e5;
+}
+.slide-item1,.slide-item2,.slide-item3,.slide-item4,.slide-item5,.slide-item6,.slide-item7,.slide-item8,.slide-item9,.slide-item10{
+	display:block;
+	width:100%;
+	padding-bottom:  100%;
+	
+}
+.slide-item1{
+	background:url(../img/icon-bg.png) no-repeat -1% -4%; 
+	background-size: 500% 200%;
+}
+.slide-item2{
+	background:url(../img/icon-bg.png) no-repeat 24% -4%; 
+	background-size: 500%;
+}
+.slide-item3{
+	background:url(../img/icon-bg.png) no-repeat 49% -4%; 
+	background-size: 500%;
+}
+.slide-item4{
+	background:url(../img/icon-bg.png) no-repeat 75% -4%; 
+	background-size: 500%;
+}
+.slide-item5{
+	background:url(../img/icon-bg.png) no-repeat 101% -4%; 
+	background-size: 500%;
+}
+.slide-item6{
+	background:url(../img/icon-bg.png) no-repeat -1% 104%; 
+	background-size: 500%;
+}
+.slide-item7{
+	background:url(../img/icon-bg.png) no-repeat 24% 104%; 
+	background-size: 500%;
+}
+.slide-item8{
+	background:url(../img/icon-bg.png) no-repeat 49% 104%; 
+	background-size: 500%;
+}
+.slide-item9{
+	background:url(../img/icon-bg.png) no-repeat 75% 104%; 
+	background-size: 500%;
+}
+.slide-item10{
+	background:url(../img/icon-bg.png) no-repeat 101% 104%; 
+	background-size: 500%;
+}
+.input-label{
+	max-width: 90px;
+}
+.order-icon{
+	width: 45px;
+	height: 40px;
+	margin: 0 auto;
+	display: block;
+}
+.order-dt{
+	margin-bottom: 5px;
+}
+.order-dd{
+	text-align: center;
+}
+.photo-box a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.photo-box img{
+	width: 100%;
+	height: 100%;
+}
+/* 城市选择器样式 */
+.city{
+	background-color: none;
+}
+.carlist{
+	height: 300px;
+	padding: 0px;
+	transition: all linear 0.3s;
+  /* 	min-height: 150px;
+  	max-height: 300px; */
+}
+.ng-hide {
+  height: 0px;
+}
+
+.my-list .item-thumbnail-left {
+	padding-left: 76px;
+	min-height: 90px;
+}
+.bar .title + .my-button{
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+}

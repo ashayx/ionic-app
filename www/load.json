@@ -1,0 +1,37 @@
+{
+    "sites": [
+        {   
+            "photo":"img/a.png",
+            "name": "海悦天地",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"1"
+        }, {   
+            "photo":"img/a.png",
+            "name": "海悦天地",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"1"
+        }, {   
+            "photo":"img/a.png",
+            "name": "海悦天地",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"1"
+        }, {   
+            "photo":"img/a.png",
+            "name": "海悦天地",
+            "sold": "222",
+            "time": "33",
+            "price":"20",
+            "extra":"4",
+            "distance":"1"
+        }
+    ]
+}
