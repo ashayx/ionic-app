@@ -1,4 +1,5 @@
-ionic美食APP
+ionic美食APP的一个demo
+没有UI，样式做的很丑
 ====
 一个简单的外卖APP，采用angular路由和数据绑定
 ------
